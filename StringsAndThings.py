@@ -29,6 +29,10 @@ print('Hello')
 print("Jordan's tall")
 print('Jordan has been known to "program" late into the night')
 
+#combining escape characters
+print('The pet shop owner said "No, no, \'e\'s uh,...he\'s resting"')
+
+
 #concat
 print("Jordans" + " quick" + " guide")
 
@@ -37,7 +41,18 @@ greeting = "Hello "
 name = "Jordan"
 print(greeting + name)
 
+#multi line variable strings
+
+anotherSplitString = """This string
+has been split over
+several lines"""
+print(anotherSplitString)
+
 # " " <--- space
-# "" <--- empty 
+# "" <--- empty
+
+#tabs
+tabString = "1\t2\t3\t4\t5\t"
+print(tabString)
 
 

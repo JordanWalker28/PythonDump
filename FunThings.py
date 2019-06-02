@@ -1,4 +1,6 @@
 #Play speech with argument say being the prompt
 
 import os
-os.system('say "Hello Trisha, your linked in profile looks good"')
+name = "Jordan"
+os.system("echo 'hello world'")
+os.system("say " + name) 
