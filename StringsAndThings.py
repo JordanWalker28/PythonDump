@@ -55,4 +55,36 @@ print(anotherSplitString)
 tabString = "1\t2\t3\t4\t5\t"
 print(tabString)
 
+#getting specific characters
+team = "Manchester City"
+print(team)
+print(team[0])
+print(team[-1])
 
+#parts of a string
+print(team[0:10]) #range from the first character till the specified range
+print(team[:10]) #shorthand for previous 
+print(team[11:]) #everything after the 11th character
+print(team[0:10:2]) #every second character in the range of the first 10 characters
+print(team[-5:-1]) #everything from the reverse of the string
+
+numbers = "1, 2, 3, 4, 5, 6, 7, 8, 9"
+print(numbers[0::3]) #useful for printing certain aspects of a formulated string
+
+#check if substring x is part of string y
+var1 = "today"
+print("day" in var1) #Return True
+print("can" in "cannot") #Return True
+print("dope" in "hello") #Returns False
+
+#numbers and strings
+age = 27
+#print("My age is " + age + " years") <-- causes error
+#alternative
+print("My age is " + str(age) + " years")
+print("My age is {0} years".format(age))
+print("There are {0} days in {1}, {2}, {3}, {4}, {5}, {6} and {7} ".format(31,
+        "January", "March", "May", "July", "August", "October", "December"))
+
+for i in range (1,12):
+    print("{0} squared is {1} and cubed is {2}".format(i, i*i, i**i))

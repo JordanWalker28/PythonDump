@@ -61,7 +61,7 @@ draw_axes()
 
 bar_x = 0
 current_date = datetime.datetime.utcnow()
-chart_data = [('AUD', 'blue'), ('GBP', 'red'),  ('EUR', 'yellow')]
+chart_data = [('GBP', 'red'),  ('EUR', 'green')]
 
 for year, month in generate_year_month(current_date):
     url = 'http://www.learnprogramming.academy/exchangerates/{0}-{1:02d}'.format(year, month)
@@ -74,6 +74,7 @@ for year, month in generate_year_month(current_date):
         data_values = con.read()
         dict1 = json.loads(data_values.decode('utf-8'))
         rates = dict1['rates']
+        print(rates)
         print_label(bar_x + 1, "{}\n{}".format(datetime.date(year, month, 1).strftime('%B')[:3], year))
 
         for currency, colour in chart_data:
@@ -87,8 +88,7 @@ for currency, colour in chart_data:
     canvas.create_text(x_origin / 2, row_y_position, text=currency, anchor='nw', fill=colour)
     row_y_position += 20
 
-ecb_terms_of_use = tkinter.Label(main_window, text="From June 2018, data is averaged over the month"
-                                                   " from the ECB daily feed (rebased to USD)")
-ecb_terms_of_use.grid(row=2, column=0)
+#ecb_terms_of_use = tkinter.Label(main_window, text="From June 2018, data is averaged over the month"" from the ECB daily feed (rebased to USD)")
+#ecb_terms_of_use.grid(row=2, column=0)
 
 main_window.mainloop()
