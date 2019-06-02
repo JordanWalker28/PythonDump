@@ -88,3 +88,6 @@ print("There are {0} days in {1}, {2}, {3}, {4}, {5}, {6} and {7} ".format(31,
 
 for i in range (1,12):
     print("{0} squared is {1} and cubed is {2}".format(i, i*i, i**i))
+
+print("Pi is approximatley {0}".format(22/7))
+print("Pi is approximatley {0:12.50}".format(22/7))
